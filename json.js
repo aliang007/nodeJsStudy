@@ -1,33 +1,22 @@
-/*var http = require('http');  
+const http = require('http');  
   
-http.createServer(function (request, response) {  
+http.createServer( (request, response) => {  
   
     if(request.url == "/json"){  
         response.writeHead(200, {'Content-Type': 'application/json'});  
-        var data = {  
-            "name":"nodejs",  
-            "value":"stone"  
+        const data = {  
+            "name":"aliang", 
+            "age" : 18,
+            "domain":"www.aliang.me"  
         };  
         response.end(JSON.stringify(data));  
     }else{  
-        response.writeHead(200, {'Content-Type': 'text/plain'});  
+        response.writeHead(200, {'Content-Type': 'text/html'});  
   
-        response.end('Hello World\n');  
+        response.end('<h1>Hello world</h1>\n\n\n<h1>访问 /json 输出接口</h1>');  
     }  
       
 }).listen(8888);
   
 // 终端打印如下信息  
 console.log('Server running at http://127.0.0.1:8888/');
-*/
-
-
-var events = require('events'); 
-var emitter = new events.EventEmitter(); 
-emitter.on('someEvent', function(arg1, arg2) { 
-    console.log('listener1', arg1, arg2); 
-}); 
-emitter.on('someEvent', function(arg1, arg2) { 
-    console.log('listener2', arg1, arg2); 
-}); 
-emitter.emit('someEvent', 'arg1 参数', 'arg2 参数'); 
