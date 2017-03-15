@@ -1,0 +1,9 @@
+{
+  "name": "realtime-server",
+  "version": "0.0.1",
+  "description": "多人聊天socket+express",
+  "dependencies": {
+    "express": "^4.15.2",
+    "socket.io": "^1.7.3"
+  }
+}
