@@ -11,5 +11,3 @@ express+fs+multer
 
 ### 多人聊天
 socketIo+express
-
-test
